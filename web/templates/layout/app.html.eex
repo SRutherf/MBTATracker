@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Hello MbtaTracker!</title>
+    <title>Mbta Live Tracker</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
   </head>
 
@@ -15,8 +15,11 @@
     <div class="container">
       <header class="header">
         <nav role="navigation">
+          <ul class="nav nav-pills pull-left">
+            <li><div id="date"></div></li>
+          </ul>
           <ul class="nav nav-pills pull-right">
-            <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
+            <li><div id="time"></div></li>
           </ul>
         </nav>
         <span class="logo"></span>
@@ -31,5 +34,6 @@
 
     </div> <!-- /container -->
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+    <script src="<%= static_path(@conn, "/js/papaparse.min.js") %>"></script>
   </body>
 </html>
